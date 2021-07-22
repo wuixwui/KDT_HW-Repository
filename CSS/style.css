@@ -89,8 +89,8 @@ header .container .main-bar .menu li a{
     padding-right: 10px;
 }
 
-header.container .main-bar .menu li a:hover{
-
+header .container .main-bar .menu li a:hover{
+    color: #57606A;
 }
 
 /* INFO BAR */
@@ -115,7 +115,7 @@ header .container .info-bar a:active{
 }
 
 header .container .info-bar .bell{
-    transition: transform .5s;
+    transition: transform .5s ease;
     transform-origin: center;
 }
 header .container .info-bar .bell:hover{
@@ -123,20 +123,26 @@ header .container .info-bar .bell:hover{
 }
 
 
-header .container .info-bar .repo-set{}
+header .container .info-bar .repo-set{
+    transition: transform .5s ease;
+    transform-origin: center;
+}
+header .container .info-bar .repo-set:hover{
+    transform: translateY(-3px);
+}
 
-
-header .container .info-bar.user-info{
+header .container .info-bar .user-info{
     display: flex;
     align-items: center;
 }
 
 header .container .info-bar .user-info .user-image {
-    display: inline-block;
-    height: 30px;
-    width: 30px;
-    border-radius: 15px;
-    background: #57606A;
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    background: url("../images/GitHub-Mark-Light-32px.png") cover;
+    margin-right: 5px;
+
 }
 
 
