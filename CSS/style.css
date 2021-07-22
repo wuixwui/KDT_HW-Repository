@@ -64,6 +64,10 @@ header .container .main-bar .serch input{
     width: 100%;
 }
 
+header .container .main-bar .serch input:focus{
+    color: #fff;
+}
+
 header .container .main-bar .serch .serch-slash{
     margin-right: 8px;
     border: .2px solid #57606A;
@@ -133,16 +137,21 @@ header .container .info-bar .repo-set:hover{
 
 header .container .info-bar .user-info{
     display: flex;
-    align-items: center;
+    align-items: center; 
+    transition: transform .5s ease;
+    transform-origin: center;
+}
+
+header .container .info-bar .user-info:hover{
+    transform: translateY(-3px);
 }
 
 header .container .info-bar .user-info .user-image {
     height: 20px;
     width: 20px;
     border-radius: 10px;
-    background: url("../images/GitHub-Mark-Light-32px.png") cover;
+    background: #57606A;
     margin-right: 5px;
-
 }
 
 
