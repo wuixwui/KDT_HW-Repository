@@ -85,7 +85,9 @@ header .container .main-bar ul{
     display: flex;
     align-items: center;
 }
-
+header .container .main-bar .menu li:first-child{
+    min-width: 91px;
+}
 header .container .main-bar .menu li a{
     color: #fff;
     font-weight: 600;
@@ -128,6 +130,7 @@ header .container .info-bar .bell:hover{
 
 
 header .container .info-bar .repo-set{
+    min-width: 48.7px;
     transition: transform .5s ease;
     transform-origin: center;
 }
@@ -136,6 +139,7 @@ header .container .info-bar .repo-set:hover{
 }
 
 header .container .info-bar .user-info{
+    min-width: 53px;
     display: flex;
     align-items: center; 
     transition: transform .5s ease;
