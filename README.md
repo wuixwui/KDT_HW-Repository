@@ -1,2 +1,5 @@
 # KDT_HW-Repository
-KDT First Week Task
+KDT Week Project
+
+---
+for project inspection and feedback
