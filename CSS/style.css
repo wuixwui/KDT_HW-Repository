@@ -2,8 +2,8 @@
 
 * {
     box-sizing: border-box;
-    font-family: BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
     font: 14px;
+    font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
 }
 
@@ -27,28 +27,29 @@ header .container {
     height: 30px;
 }
 
+/* MAIN BAR */
 header .container .main-bar{
     flex-grow: 1;
     
     display: flex;
     align-items: center;
 }
-
+/* LOGO */
 header .container .main-bar img{
     width: 32px;
     margin-right: 16px;
 }
-
+/* search */
 header .container .main-bar .serch{
     display: flex;
     align-items: center;
 
-    color: white;
+    color: #fff;
     width:270px;
     height: 28px;
     margin-right: 16px;
     
-    border: .1px solid gray;
+    border: .1px solid #57606A;
     border-radius: 6px;
 
 
@@ -58,56 +59,85 @@ header .container .main-bar .serch input{
     border: none;
     padding: 0 12px;
 
+    outline: none;
+
     width: 100%;
 }
+
 header .container .main-bar .serch .serch-slash{
     margin-right: 8px;
-    border: .2px solid gray;
+    border: .2px solid #57606A;
     border-radius: 3px;
     width: 20px;
     height: 19px;
 
-    color: gray;
+    color: #57606A;
     text-align: center;
     line-height: 19px;
 }
 
+/* MENU */
 header .container .main-bar ul{
     display: flex;
     align-items: center;
 }
 
-header .container .main-bar .menu li{}
-
 header .container .main-bar .menu li a{
-    color: white;
+    color: #fff;
     font-weight: 600;
     font-size: 13px;
     padding-right: 10px;
-    
-    
+}
+
+header.container .main-bar .menu li a:hover{
 
 }
 
+/* INFO BAR */
 header .container .info-bar{
-    background-color: teal;
+    
+    height: 28px;
 
     flex-grow: 0;
     
     display: flex;
-    position: relative;
-    
-
+    align-items: center;
 }
 
-header .container .info-bar .bell{}
+header .container .info-bar a{
+    color: #fff;
+    font-size: 12px;
+    padding-left: 16px;
+
+}
+header .container .info-bar a:active{
+    color:#57606A
+}
+
+header .container .info-bar .bell{
+    transition: transform .5s;
+    transform-origin: center;
+}
+header .container .info-bar .bell:hover{
+    transform: translateY(-3px);
+}
+
 
 header .container .info-bar .repo-set{}
 
-header .container .info-bar.user-info{}
 
-header .container .info-bar.user-info .user-image{}
+header .container .info-bar.user-info{
+    display: flex;
+    align-items: center;
+}
 
+header .container .info-bar .user-info .user-image {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    background: #57606A;
+}
 
 
 
