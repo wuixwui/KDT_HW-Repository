@@ -20,20 +20,17 @@ header {
     padding: 16px 32px;
     background-color: #24292F;
 }
-
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     height: 30px;
 }
 
 /* MAIN BAR */
 header .container .main-bar{
-    flex-grow: 1;
-    
     display: flex;
+    flex-grow: 1;
     align-items: center;
 }
 /* LOGO */
@@ -45,38 +42,29 @@ header .container .main-bar img{
 header .container .main-bar .search{
     display: flex;
     align-items: center;
-
-    color: #fff;
     width:270px;
     height: 28px;
     margin-right: 16px;
-    
     border: .1px solid #57606A;
     border-radius: 6px;
-
-
+    color: rgb(22, 21, 21);
 }
 header .container .main-bar .search input{
-    background-color: transparent;
-    border: none;
-    padding: 0 12px;
-
-    outline: none;
-
     width: 100%;
+    padding: 0 12px;
+    border: none;
+    background-color: transparent;
+    outline: none;
 }
-
 header .container .main-bar .search input:focus{
     color: #fff;
 }
-
 header .container .main-bar .search .serch-slash{
+    width: 20px;
+    height: 19px;
     margin-right: 8px;
     border: .2px solid #57606A;
     border-radius: 3px;
-    width: 20px;
-    height: 19px;
-
     color: #57606A;
     text-align: center;
     line-height: 19px;
@@ -91,37 +79,29 @@ header .container .main-bar .menu li:first-child{
     min-width: 91px;
 }
 header .container .main-bar .menu li a{
+    padding-right: 10px;
     color: #fff;
     font-weight: 600;
     font-size: 13px;
-    padding-right: 10px;
 }
-
 header .container .main-bar .menu li a:hover{
     color: #57606A;
 }
-
 /* INFO BAR */
 header .container .info-bar{
-    
-    height: 28px;
-
-    flex-grow: 0;
-    
     display: flex;
+    flex-grow: 0;
     align-items: center;
+    height: 28px;
 }
-
 header .container .info-bar a{
+    padding-left: 16px;
     color: #fff;
     font-size: 12px;
-    padding-left: 16px;
-
 }
 header .container .info-bar a:active{
     color:#57606A
 }
-
 header .container .info-bar .bell{
     transition: transform .5s ease;
     transform-origin: center;
@@ -129,8 +109,6 @@ header .container .info-bar .bell{
 header .container .info-bar .bell:hover{
     transform: translateY(-3px);
 }
-
-
 header .container .info-bar .repo-set{
     min-width: 48.7px;
     transition: transform .5s ease;
@@ -139,30 +117,20 @@ header .container .info-bar .repo-set{
 header .container .info-bar .repo-set:hover{
     transform: translateY(-3px);
 }
-
 header .container .info-bar .user-info{
-    min-width: 53px;
     display: flex;
     align-items: center; 
+    min-width: 53px;
     transition: transform .5s ease;
     transform-origin: center;
 }
-
 header .container .info-bar .user-info:hover{
     transform: translateY(-3px);
 }
-
 header .container .info-bar .user-info .user-image {
     height: 20px;
     width: 20px;
+    margin-right: 5px;
     border-radius: 10px;
     background: #57606A;
-    margin-right: 5px;
 }
-
-
-
-
-
-
-
