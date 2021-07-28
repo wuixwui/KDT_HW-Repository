@@ -40,7 +40,7 @@ header .container .main-bar img{
     margin-right: 16px;
 }
 /* search */
-header .container .main-bar .serch{
+header .container .main-bar .search{
     display: flex;
     align-items: center;
 
@@ -54,7 +54,7 @@ header .container .main-bar .serch{
 
 
 }
-header .container .main-bar .serch input{
+header .container .main-bar .search input{
     background-color: transparent;
     border: none;
     padding: 0 12px;
@@ -64,11 +64,11 @@ header .container .main-bar .serch input{
     width: 100%;
 }
 
-header .container .main-bar .serch input:focus{
+header .container .main-bar .search input:focus{
     color: #fff;
 }
 
-header .container .main-bar .serch .serch-slash{
+header .container .main-bar .search .serch-slash{
     margin-right: 8px;
     border: .2px solid #57606A;
     border-radius: 3px;
