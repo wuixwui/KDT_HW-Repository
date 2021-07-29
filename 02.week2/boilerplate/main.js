@@ -16,31 +16,64 @@ const data = [
 const line = prompt('최대 금액을 입력해주세요.');
 const amount = +line;
 
+const viewText = document.querySelector('h1')
+
 // 주어진 금액으로 살 수 있는 가장 비싼 상품을 구함
 const item = getItemByAmount(data, amount);
 
+// 화면에 구매할 물건 나타내보기
+function viewItem () {
+    viewText.innerText= `🤗 ${item.name} 사볼까?`
+}
+
+// 삼항 연산자
+// item이 true면 
 const msg = item ? 
-    `${amount}원으로 살 수 있는 가장 비싼 상품은 [${item.name}]이고, 가격은 ${item.price}원입니다.` : 
-    '살 수 있는 상품이 없습니다.';
+`${amount}원으로 살 수 있는 가장 비싼 상품은 [${item.name}]이고, 가격은 ${item.price}원입니다.` : 
+'살 수 있는 상품이 없습니다.';
 
 // 결과 출력
 alert(msg);
+viewItem()
 
 // 아래에 getItemByAmount 함수를 작성하세요.
 
+function getItemByAmount(data, amount) {
+    // 사용자에게 입력받은 값을 int로 타입을 바꿔줍니다.
+    const userPrice = parseInt(amount);
+    // 비어있는 객체를 생성합니다.
+    let cart = null;
+    // 만약 price가 숫자가 아니라면 null값을 리턴합니다.
+    if (isNaN(userPrice)) {
+        return null;
+    }else { // 숫자가 맞다면 다음을 수행합니다.
+        for (let i = 0; i < data.length; i++) {
+            // 사용자가 가진 금액이 0원이거나 0보다 작다면 null을 리턴합니다.
+            if (data[i].price === 0 || data[i].price < 0) {
+                return null;
+            // 사용자가 가진 금액보다 물건이 비싸면 넘어갑니다. 
+            } else if (data[i].price > userPrice) {
+                continue;
+            // 사용자가 가진 금액보다 작은 물건 중 가장 큰 값을 찾는 조건문을 실행합니다.
+            } else { 
+                // 객체가 비어있다면 첫번째 물건을 넣어줍니다.
+                if (cart === null) {
+                    cart = data[i];
+                // 객체가 비어있지 않다면 다음을 진행합니다.
+                } else {
+                    // 객체의 값보다 큰 값의 물건이 나오면 객체안의 물건을 큰 물건으로 바꿔줍니다.
+                    if (data[i].price > cart.price) {
+                        cart = data[i];
+                    }
+                }
+            }
+        }
+        // 가장 비싼 물건이 담긴 객체를 반환합니다.
+        return cart
+    }
+
+};
 
 
 
 
-// <과제 상세 설명>
-// 상품 데이터와 사용자가 입력한 금액을 넘겨 받아 해당 금액으로 살 수 있는 가장 비싼 상품을 리턴하는 함수를 만들어야 합니다.
-
-// 함수명 : getItemByAmount
-// 인자 : 상품 데이터, 사용자가 입력한 금액
-// 리턴 : 로직에 의해 선택된 상품 (없다면 null)
-
-// <점검 및 합격 기준>
-// 주어진 boilerplate의 지정된 장소에 함수를 만듭니다.
-// 요구사항에 맞춰 로직을 작성합니다.
-// 사용자의 입력이 유효한 숫자가 아니라면 null을 리턴합니다.
-// 코드의 이해가 쉽도록 주석을 적절히 추가합니다.
