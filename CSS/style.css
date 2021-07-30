@@ -34,9 +34,13 @@ header .container .main-bar{
     align-items: center;
 }
 /* LOGO */
-header .container .main-bar img{
-    width: 32px;
+header .container .main-bar svg {
     margin-right: 16px;
+    fill: #fff
+}
+header .container .main-bar svg:hover{
+    margin-right: 16px;
+    fill: #57606A
 }
 /* search */
 header .container .main-bar .search{
