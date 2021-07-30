@@ -38,9 +38,13 @@ header .container .main-bar svg {
     margin-right: 16px;
     fill: #fff
 }
-header .container .main-bar svg:hover{
+header .container .main-bar svg:hover {
     margin-right: 16px;
     fill: #57606A
+}
+header .container .main-bar .logo span {
+    display: inline-block;
+    text-indent: -9999px;
 }
 /* search */
 header .container .main-bar .search{
