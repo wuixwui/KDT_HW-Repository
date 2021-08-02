@@ -19,15 +19,15 @@ class NaverNewsCrawler:
 
         print(f"{self.keyword}에 대한 기사 수집 시작")
         html = BeautifulSoup(req.text, "html.parser")
-        news_items = html.select("div.news.section > ul > li")
+        news_items = html.select("div.group_news > ul > li")
         wb = Workbook()
         ws = wb.active
         ws.append(['번호','제목','주소','요약'])
         for index, item in enumerate(news_items, start=1):
-            title_tag = item.select_one('._sp_each_title')
+            title_tag = item.select_one('a.news_tit')
             title = title_tag.text
             url = title_tag.attrs['href']
-            description = item.select('dd')[2].text.strip() if len(item.select('dd')) >= 3 else "요약 정보 없음"
+            description = item.select_one('div.news_dsc').text if len(item.select_one('div.news_dsc').text) >= 3 else "요약 정보 없음"
             print(index, title, url, description)
             ws.append([index, title, url, description])
 
