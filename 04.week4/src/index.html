@@ -47,11 +47,13 @@
                         <p>
                             <label>
                                 내용<br />
-                                <input
+                                <textarea
                                     name="content"
                                     cols="55"
                                     rows="5"
-                                ></input>
+                                    spellcheck
+                                    placeholder="내용을 입력하세요."
+                                ></textarea>
                             </label>
                         </p>
                         <p>
@@ -67,23 +69,23 @@
                         <hr class="separator" />
                         <fieldset>
                             <legend>기분(단일선택)</legend>
-                            <input
-                                type="checkbox"
+                            <label ><input
+                                type="radio"
                                 name="feeling"
                                 value="Happy"
-                                id="feeling:Happy"
+                                
                                 checked
                             />
-                            <label for="feeling:Happy">행복함</label><br />
+                            행복함</label><br />
                             <input
-                                type="checkbox"
+                                type="radio"
                                 name="feeling"
                                 value="Bad"
                                 id="feeling:Bad"
                             />
                             <label for="feeling:Bad">나쁨</label><br />
                             <input
-                                type="checkbox"
+                                type="radio"
                                 name="feeling"
                                 value="Sad"
                                 id="feeling:Sad"
@@ -126,8 +128,8 @@
                             <label for="category:ETC">기타 </label><br />
                         </fieldset>
                         <footer class="buttons">
-                            <button type="button">글쓰기</button>
-                            <button type="button">초기화</button>
+                            <button type="submit" name="button"value="writing">글쓰기</button>
+                            <button type="reset" name="button" value="reset">초기화</button>
                         </footer>
                     </form>
                 </div>
