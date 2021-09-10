@@ -26,7 +26,7 @@
     />
   </head>
   <body>
-    <header>
+    <!-- phone head -->
       <div class="phone-bar">
         <div class="current-time">
           <p class="hour">9</p>
@@ -83,17 +83,17 @@
           </svg>
         </div>
       </div>
-    </header>
-    <main>
-      <!-- total section -->
+      
       <div class="app">
-        <section class="total">
+        <!-- main section -->
+        <section class="main-page">
           <header>
             <div class="header-left">
               <img
                 src="./src/images/avatar/020092.jpg"
                 alt="사용자 이미지"
-                style="width: 50px; border-radius: 50%"
+                width="50px"
+                style="border-radius: 50%"
               />
             </div>
             <h1 class="title">생활비</h1>
@@ -124,114 +124,128 @@
               </svg>
             </div>
           </header>
-          <div class="card">
-            <header>
-              <div class="account">
-                <strong class="account-number">355-673877-78773</strong>
+          <section class="total">
+            <div class="card">
+                <div class="account">
+                  <strong class="account-number">355-673877-78773</strong>
+                </div>
+                <button class="btn--transfer">이체</button>
+              <div class="amount">
+                <strong class="user-amount">1,240,000</strong> 원
               </div>
-              <button>이체</button>
-            </header>
-            <div class="amount">
-              <strong class="user-amount">1,240,000</strong> 원
+              <div class="slide">
+                <div class="slide__bar"></div>
+                <button class="btn--spending">
+                  <svg width="24" height="24" viewBox="0 0 24 24" role="img">
+                    <text font-size="0">지출 관리 화면으로 이동</text>
+                    <path
+                      d="M5 9.2H8V19H5V9.2ZM10.6 5H13.4V19H10.6V5ZM16.2 13H19V19H16.2V13Z"
+                      fill="black"
+                    />
+                  </svg>
+                </button>
+              </div class="remaining">
+                <p>
+                  <span class="remaining-day">5</span>일 동안
+                  <span class="remaining-amount">10,000</span>원 남음
+                </p>
             </div>
-            <div class="slide">
-              <div class="slide__bar"></div>
-              <button>
-                <svg width="24" height="24" viewBox="0 0 24 24" role="img">
-                  <text font-size="0">지출 관리 화면으로 이동</text>
-                  <path
-                    d="M5 9.2H8V19H5V9.2ZM10.6 5H13.4V19H10.6V5ZM16.2 13H19V19H16.2V13Z"
-                    fill="black"
-                  />
-                </svg>
-              </button>
-            </div>
-            <footer>
+            <aside>
               <p>
-                <span class="remaining-day">5</span>일 동안
-                <span class="remaining-amount">10,000</span>원 남음
+                지금 낮은 이자로 생활대출을 신청하세요!<a
+                  href="javascript:void(0)" target="_blank"
+                  >Go</a
+                >
               </p>
-            </footer>
-          </div>
-          <aside>
-            <p>
-              지금 낮은 이자로 생활대출을 신청하세요!<a
-                href="javascript:void(0)"
-                >Go</a
-              >
-            </p>
-          </aside>
-          <!-- detail section -->
-          <section class="details">
-            <!-- drag and drop btn -->
-            <button></button>
-            <article class="piggy-bank slider">
-              <ul class="slides">
-                <li class="slide">
-                  <div class="gauge">
-                    <p class="piggy-bank__name">여행가자!</p>
-                    <p class="piggy-bank__amount">
-                      <em class="piggy-bank__sum">842,000</em>원
+            </aside>
+            <!-- detail section -->
+            <section class="details">
+              <!-- drag and drop btn -->
+              <button></button>
+              <article class="piggy-bank slider">
+                <ul class="slides">
+                  <li class="slide">
+                    <div class="gauge">
+                      <p class="piggy-bank__name">여행가자!</p>
+                      <p class="piggy-bank__amount">
+                        <em class="piggy-bank__sum">842,000</em>원
+                      </p>
+                    </div>
+                  </li>
+                  <li class="slide">
+                    <div class="gauge">
+                      <p class="piggy-bank__name">냉장고사기</p>
+                      <p class="piggy-bank__amount">
+                        <em class="piggy-bank__sum">142,000</em>원
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+                <button>
+                  <svg width="23" height="23" viewBox="0 0 23 23" role="img">
+                    <text font-size="0">저금통 추가하기</text>
+                    <path
+                      d="M11.25 0.5C12.2812 0.5 13.2773 0.632813 14.2383 0.898438C15.1992 1.16406 16.0938 1.54297 16.9219 2.03516C17.75 2.52734 18.5078 3.11328 19.1953 3.79297C19.8828 4.47266 20.4688 5.23047 20.9531 6.06641C21.4375 6.90234 21.8164 7.80078 22.0898 8.76172C22.3633 9.72266 22.5 10.7188 22.5 11.75C22.5 12.7812 22.3672 13.7773 22.1016 14.7383C21.8359 15.6992 21.457 16.5938 20.9648 17.4219C20.4727 18.25 19.8867 19.0078 19.207 19.6953C18.5273 20.3828 17.7695 20.9688 16.9336 21.4531C16.0977 21.9375 15.1992 22.3164 14.2383 22.5898C13.2773 22.8633 12.2812 23 11.25 23C10.2188 23 9.22266 22.8672 8.26172 22.6016C7.30078 22.3359 6.40625 21.957 5.57812 21.4648C4.75 20.9727 3.99219 20.3867 3.30469 19.707C2.61719 19.0273 2.03125 18.2695 1.54688 17.4336C1.0625 16.5977 0.683594 15.7031 0.410156 14.75C0.136719 13.7969 0 12.7969 0 11.75C0 10.7188 0.132813 9.72266 0.398438 8.76172C0.664062 7.80078 1.04297 6.90625 1.53516 6.07812C2.02734 5.25 2.61328 4.49219 3.29297 3.80469C3.97266 3.11719 4.73047 2.53125 5.56641 2.04688C6.40234 1.5625 7.29687 1.18359 8.25 0.910156C9.20313 0.636719 10.2031 0.5 11.25 0.5ZM18 11H12V5H10.5V11H4.5V12.5H10.5V18.5H12V12.5H18V11Z"
+                      fill="#FF5F00"
+                    />
+                  </svg>
+                  <span>저금통 만들기</span>
+                </button>
+              </article>
+              <div class="day-container">
+                <article class="day today">
+                  <header class="day__title">
+                    <h3>오늘</h3>
+                    <p class="day__amount">
+                      <em class="day__sum">127,600</em>원 지출
                     </p>
-                  </div>
-                </li>
-                <li class="slide">
-                  <div class="gauge">
-                    <p class="piggy-bank__name">냉장고사기</p>
-                    <p class="piggy-bank__amount">
-                      <em class="piggy-bank__sum">142,000</em>원
+                  </header>
+                  <ol class="day__spendings">
+                    <li class="plus">
+                      <p class="name">내용</p>
+                      <p class="amount">가격</p>
+                    </li>
+                    <li class="minus">
+                      <p class="name">내용</p>
+                      <p class="amount">가격</p>
+                    </li>
+                  </ol>
+                </article>
+                <article class="day yesterday">
+                  <header class="day__title">
+                    <h3>어제</h3>
+                    <p class="day__amount">
+                      <em class="day__sum">71,600</em>원 지출
                     </p>
-                  </div>
-                </li>
-              </ul>
-              <button>
-                <svg width="23" height="23" viewBox="0 0 23 23" role="img">
-                  <text font-size="0">저금통 추가하기</text>
-                  <path
-                    d="M11.25 0.5C12.2812 0.5 13.2773 0.632813 14.2383 0.898438C15.1992 1.16406 16.0938 1.54297 16.9219 2.03516C17.75 2.52734 18.5078 3.11328 19.1953 3.79297C19.8828 4.47266 20.4688 5.23047 20.9531 6.06641C21.4375 6.90234 21.8164 7.80078 22.0898 8.76172C22.3633 9.72266 22.5 10.7188 22.5 11.75C22.5 12.7812 22.3672 13.7773 22.1016 14.7383C21.8359 15.6992 21.457 16.5938 20.9648 17.4219C20.4727 18.25 19.8867 19.0078 19.207 19.6953C18.5273 20.3828 17.7695 20.9688 16.9336 21.4531C16.0977 21.9375 15.1992 22.3164 14.2383 22.5898C13.2773 22.8633 12.2812 23 11.25 23C10.2188 23 9.22266 22.8672 8.26172 22.6016C7.30078 22.3359 6.40625 21.957 5.57812 21.4648C4.75 20.9727 3.99219 20.3867 3.30469 19.707C2.61719 19.0273 2.03125 18.2695 1.54688 17.4336C1.0625 16.5977 0.683594 15.7031 0.410156 14.75C0.136719 13.7969 0 12.7969 0 11.75C0 10.7188 0.132813 9.72266 0.398438 8.76172C0.664062 7.80078 1.04297 6.90625 1.53516 6.07812C2.02734 5.25 2.61328 4.49219 3.29297 3.80469C3.97266 3.11719 4.73047 2.53125 5.56641 2.04688C6.40234 1.5625 7.29687 1.18359 8.25 0.910156C9.20313 0.636719 10.2031 0.5 11.25 0.5ZM18 11H12V5H10.5V11H4.5V12.5H10.5V18.5H12V12.5H18V11Z"
-                    fill="#FF5F00"
-                  />
-                </svg>
-              </button>
-            </article>
-            <article class="day today">
-              <header class="day__title">
-                <h3>오늘</h3>
-                <p class="day__amount">
-                  <em class="day__sum">127,600</em>원 지출
-                </p>
-              </header>
-              <ol class="day__spendings">
-                <li>
-                  <p class="name">내용</p>
-                  <p class="amount plus">가격</p>
-                </li>
-                <li>
-                  <p class="name">내용</p>
-                  <p class="amount minus">가격</p>
-                </li>
-              </ol>
-            </article>
-            <article class="day yesterday">
-              <header class="day__title">
-                <h3>어제</h3>
-                <p class="day__amount">
-                  <em class="day__sum">71,600</em>원 지출
-                </p>
-              </header>
-              <ol class="day__spendings">
-                <li>
-                  <p class="name">내용</p>
-                  <p class="amount minus">가격</p>
-                </li>
-              </ol>
-            </article>
+                  </header>
+                  <ol class="day__spendings">
+                    <li class="minus">
+                      <p class="name">내용</p>
+                      <p class="amount">가격</p>
+                    </li>
+                  </ol>
+                </article>
+                <article class="day 2days-ago">
+                  <header class="day__title">
+                    <h3>어제</h3>
+                    <p class="day__amount">
+                      <em class="day__sum">64,000</em>원 지출
+                    </p>
+                  </header>
+                  <ol class="day__spendings">
+                    <li class="minus">
+                      <p class="name">내용</p>
+                      <p class="amount">가격</p>
+                    </li>
+                  </ol>
+                </article>
+              </div>
+            </section>
           </section>
         </section>
         <!-- spending management section -->
-        <section class="sp-management">
+        <section class="manage-page">
           <header>
-            <button>닫기</button>
             <h2>지출 관리</h2>
           </header>
           <div class="standard">
@@ -315,9 +329,11 @@
               </li>
             </ul>
           </article>
+          <button>닫기</button>
         </section>
       </div>
     </main>
+    <!-- nav -->
     <footer>
       <nav>
         <ul>
