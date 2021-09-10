@@ -96,7 +96,7 @@
                 style="width: 50px; border-radius: 50%"
               />
             </div>
-            <h1 class="title">title</h1>
+            <h1 class="title">생활비</h1>
             <div class="header-right">
               <!-- scan -->
               <svg width="24" height="22" viewBox="0 0 24 22" role="img">
@@ -127,12 +127,13 @@
           <div class="card">
             <header>
               <div class="account">
-                <p class="account-number">10,000</p>
-                원
+                <strong class="account-number">355-673877-78773</strong>
               </div>
               <button>이체</button>
             </header>
-            <div class="amount"></div>
+            <div class="amount">
+              <strong class="user-amount">1,240,000</strong> 원
+            </div>
             <div class="slide">
               <div class="slide__bar"></div>
               <button>
@@ -146,48 +147,69 @@
               </button>
             </div>
             <footer>
-              <p class="remaining-day">5</p>
-              일
-              <p class="remaining-amount">10,000</p>
-              원
+              <p>
+                <span class="remaining-day">5</span>일 동안
+                <span class="remaining-amount">10,000</span>원 남음
+              </p>
             </footer>
           </div>
-          <aside><a href="javascript:void(0)">광고 링크</a></aside>
+          <aside>
+            <p>
+              지금 낮은 이자로 생활대출을 신청하세요!<a
+                href="javascript:void(0)"
+                >Go</a
+              >
+            </p>
+          </aside>
           <!-- detail section -->
           <section class="details">
             <!-- drag and drop btn -->
             <button></button>
-            <article class="piggy-bank--slider">
+            <article class="piggy-bank slider">
               <div class="slides">
                 <div class="slide">
-                  <div class="gauge"></div>
+                  <div class="gauge">
+                    <p class="piggy-bank__name">여행가자!</p>
+                    <p class="piggy-bank__amount">842,200원</p>
+                  </div>
                 </div>
                 <div class="slide">
-                  <div class="gauge"></div>
+                  <div class="gauge">
+                    <p class="piggy-bank__name">냉장고사기</p>
+                    <p class="piggy-bank__amount">142,200원</p>
+                  </div>
                 </div>
               </div>
             </article>
-            <article class="day">
-              <div class="day__title">
+            <article class="day today">
+              <header class="day__title">
                 <h3>오늘</h3>
-                <div class="day__amount"></div>
-              </div>
+                <p class="day__amount">
+                  <em class="day__sum">127,600</em>원 지출
+                </p>
+              </header>
               <ol class="day__spendings">
                 <li>
                   <p class="name">내용</p>
-                  <p class="amount">가격</p>
+                  <p class="amount plus">가격</p>
+                </li>
+                <li>
+                  <p class="name">내용</p>
+                  <p class="amount minus">가격</p>
                 </li>
               </ol>
             </article>
-            <article class="spending__yesterday">
-              <div class="day__title">
+            <article class="day yesterday">
+              <header class="day__title">
                 <h3>어제</h3>
-                <div class="day__amount"></div>
-              </div>
+                <p class="day__amount">
+                  <em class="day__sum">71,600</em>원 지출
+                </p>
+              </header>
               <ol class="day__spendings">
                 <li>
                   <p class="name">내용</p>
-                  <p class="amount">가격</p>
+                  <p class="amount minus">가격</p>
                 </li>
               </ol>
             </article>
@@ -195,21 +217,27 @@
         </section>
         <!-- spending management section -->
         <section class="sp-management">
-          <header><button>닫기</button></header>
-          <h2>지출 관리</h2>
+          <header>
+            <button>닫기</button>
+            <h2>지출 관리</h2>
+          </header>
           <div class="standard">
             <h3 class="title">기준 금액 설정</h3>
-            <div class="price"></div>
+            <div class="price">
+              <strong class="standard-amount">2,100,000</strong> 원
+            </div>
           </div>
           <div class="slide">
             <div class="slide__bar"></div>
           </div>
           <article class="daily-report">
-            <h3 class="title"></h3>
-            <div class="graph"></div>
+            <h3 class="title">일간 리포트</h3>
+            <div class="graph-container">
+              <div class="graph"></div>
+            </div>
           </article>
-          <article class="spending-pattern">
-            <h3 class="title"></h3>
+          <article class="month-pattern">
+            <h3 class="title">6월 지출 패턴</h3>
             <div class="graph"></div>
             <ul class="list">
               <li>
@@ -218,9 +246,11 @@
                     src="./src/images/spending_icon/oiling.svg"
                     alt="주유비 카테고리"
                   />
-                  <p class="name">카테고리 이름</p>
+                  <p class="category__name">주유비</p>
                 </div>
-                <p class="amount">가격</p>
+                <p class="category__amount">
+                  <em class="category-sum">56,000</em>원
+                </p>
               </li>
               <li>
                 <div class="category">
@@ -228,9 +258,11 @@
                     src="./src/images/spending_icon/health.svg"
                     alt="건강관리비 카테고리"
                   />
-                  <p class="name">카테고리 이름</p>
+                  <p class="category__name">건강관리비</p>
                 </div>
-                <p class="amount">가격</p>
+                <p class="category__amount">
+                  <em class="category-sum">80,000</em>원
+                </p>
               </li>
               <li>
                 <div class="category">
@@ -238,9 +270,11 @@
                     src="./src/images/spending_icon/food.svg"
                     alt="외식비 카테고리"
                   />
-                  <p class="name">카테고리 이름</p>
+                  <p class="category__name">외식비</p>
                 </div>
-                <p class="amount">가격</p>
+                <p class="category__amount">
+                  <em class="category-sum">233,000</em>원
+                </p>
               </li>
               <li>
                 <div class="category">
@@ -248,9 +282,11 @@
                     src="./src/images/spending_icon/basket.svg"
                     alt="장보기 카테고리"
                   />
-                  <p class="name">카테고리 이름</p>
+                  <p class="category__name">장보기</p>
                 </div>
-                <p class="amount">가격</p>
+                <p class="category__amount">
+                  <em class="category-sum">390,000</em>원
+                </p>
               </li>
               <li>
                 <div class="category">
@@ -258,9 +294,11 @@
                     src="./src/images/spending_icon/shop.svg"
                     alt="상점 카테고리"
                   />
-                  <p class="name">카테고리 이름</p>
+                  <p class="category__name">상점</p>
                 </div>
-                <p class="amount">가격</p>
+                <p class="category__amount">
+                  <em class="category-sum">46,000</em>원
+                </p>
               </li>
             </ul>
           </article>
